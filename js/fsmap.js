@@ -62,12 +62,34 @@ var BasemapAT_orthofoto = L.tileLayer(
     }
 );
 
+var BasemapAT_overlay = L.tileLayer(
+    'https://mapsneu.wien.gv.at/basemap/bmapoverlay/{type}/google3857/{z}/{y}/{x}.{format}',
+    {
+        maxZoom: 19,
+        attribution: 'Datenquelle: <a href="https://www.basemap.at">basemap.at</a>',
+        type: 'normal',
+        format: 'png',
+        bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
+    }
+);
+
 var osmMapnik = new L.TileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
         minZoom: 3,
         maxZoom: 20,
         maxNativeZoom: 19,
+        attribution: 'Map data © OpenStreetMap contributors'
+    }
+);
+
+var osmMapnikTransparent = new L.TileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+        minZoom: 3,
+        maxZoom: 20,
+        maxNativeZoom: 19,
+        opacity: 0.5,
         attribution: 'Map data © OpenStreetMap contributors'
     }
 );
@@ -149,9 +171,9 @@ var bingAerial = new L.TileLayer.QuadKeyTileLayer(
 );
 
 var baseLayers = {
-    "Basemap (STANDARD)": BasemapAT_basemap,
-    "Basemap (HIDPI)": BasemapAT_highdpi,
-    "Basemap (Orthofoto)": BasemapAT_orthofoto,
+    "basemap.at (STANDARD)": BasemapAT_basemap,
+    "basemap.at (HIDPI)": BasemapAT_highdpi,
+    "basemap.at (Orthofoto)": BasemapAT_orthofoto,
     "OpenStreetMap": osmMapnik,
     "Tracestrack Topo": TracestrackTopo,
     "OpenTopoMap": osmOpenTopoMap,
@@ -160,6 +182,11 @@ var baseLayers = {
     "Google Maps Hybrid": googleHybrid,
     "Bing Maps": bingMaps,
     "Bing Aerial View": bingAerial
+};
+
+var overlayLayers = {
+    "basemap.at (OVERLAY)": BasemapAT_overlay,
+    "OpenStreetMap (transparent)": osmMapnikTransparent
 };
 
 /*
@@ -199,7 +226,7 @@ new L.HistoryControl({
 /*
  * Layer selector with base and overlay layers.
  */
-let layercontrol = L.control.layers(baseLayers).addTo(map);
+let layercontrol = L.control.layers(baseLayers, overlayLayers).addTo(map);
 
 /*
  * A nice scale in the bottom left corner.
