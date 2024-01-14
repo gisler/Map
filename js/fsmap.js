@@ -72,6 +72,14 @@ var osmMapnik = new L.TileLayer(
     }
 );
 
+var TracestrackTopo = new L.tileLayer(
+    'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
+    {
+        maxZoom: 18,
+        attribution: 'Data: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a>; Maps © <a href="https://www.tracestrack.com/">Tracestrack</a>'
+    }
+);
+
 var osmOpenTopoMap = new L.TileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
     {
@@ -145,6 +153,7 @@ var baseLayers = {
     "Basemap (HIDPI)": BasemapAT_highdpi,
     "Basemap (Orthofoto)": BasemapAT_orthofoto,
     "OpenStreetMap": osmMapnik,
+    "Tracestrack Topo": TracestrackTopo,
     "OpenTopoMap": osmOpenTopoMap,
     "Google Maps": googleMaps,
     "Google Maps Satellite": googleSatellite,
