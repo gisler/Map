@@ -5,7 +5,7 @@ var BasemapAT_basemap = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/geolandbasemap/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 20,
-        attribution: 'Datenquelle: <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Grundkarte: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'png',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
@@ -16,7 +16,7 @@ var BasemapAT_highdpi = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaphidpi/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 19,
-        attribution: 'Datenquelle: <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Grundkarte: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'jpeg',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
@@ -27,7 +27,7 @@ var BasemapAT_orthofoto = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 20,
-        attribution: 'Datenquelle: <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Grundkarte: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'jpeg',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
@@ -38,7 +38,7 @@ var BasemapAT_overlay = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmapoverlay/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 19,
-        attribution: 'Datenquelle: <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Overlay: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'png',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
@@ -59,7 +59,7 @@ var TracestrackTopo = new L.tileLayer(
     'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
     {
         maxZoom: 18,
-        attribution: 'Data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a> | Maps: &copy; <a href="https://www.tracestrack.com/">Tracestrack</a>'
+        attribution: 'Data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a> | Maps: &copy; <a href="https://www.tracestrack.com/">Tracestrack</a>'
     }
 );
 
