@@ -73,52 +73,13 @@ var osmOpenTopoMap = new L.TileLayer(
     }
 );
 
-var googleMaps = new L.TileLayer(
-    'https://mt.google.com/vt?&x={x}&y={y}&z={z}',
-    {
-        attribution: "<a href=\'http://maps.google.com/\'>Google</a> Maps",
-        subdomains: "1234",
-        tileSize: 256,
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 20
-    }
-);
-
-var googleSatellite = new L.TileLayer(
-    'https://mt.google.com/vt?lyrs=s&x={x}&y={y}&z={z}',
-    {
-        attribution: "<a href=\'http://maps.google.com/\'>Google</a> Maps Satellite",
-        subdomains: "1234",
-        tileSize: 256,
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 20
-    }
-);
-
-var googleHybrid = new L.TileLayer(
-    'https://mt.google.com/vt?lyrs=y&x={x}&y={y}&z={z}',
-    {
-        attribution: "<a href=\'http://maps.google.com/\'>Google</a> Maps Satellite",
-        subdomains: "1234",
-        tileSize: 256,
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 20
-    }
-);
-
 var baseLayers = {
     "basemap.at (STANDARD)": BasemapAT_basemap,
     "basemap.at (HIDPI)": BasemapAT_highdpi,
     "basemap.at (Orthofoto)": BasemapAT_orthofoto,
     "OpenStreetMap": osmMapnik,
     "Tracestrack Topo": TracestrackTopo,
-    "OpenTopoMap": osmOpenTopoMap,
-    "Google Maps": googleMaps,
-    "Google Maps Satellite": googleSatellite,
-    "Google Maps Hybrid": googleHybrid
+    "OpenTopoMap": osmOpenTopoMap
 };
 
 var overlayLayers = {
