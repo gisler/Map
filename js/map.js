@@ -1,46 +1,35 @@
 /*
  * Layer definitions.
  */
-var BasemapAT_basemap = L.tileLayer(
+var BasemapAT_basemap = new L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/geolandbasemap/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 20,
-        attribution: 'Grundkarte: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'png',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
     }
 );
 
-var BasemapAT_highdpi = L.tileLayer(
+var BasemapAT_highdpi = new L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaphidpi/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 19,
-        attribution: 'Grundkarte: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'jpeg',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
     }
 );
 
-var BasemapAT_orthofoto = L.tileLayer(
+var BasemapAT_orthofoto = new L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 20,
-        attribution: 'Grundkarte: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'jpeg',
-        bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
-    }
-);
-
-var BasemapAT_overlay = L.tileLayer(
-    'https://mapsneu.wien.gv.at/basemap/bmapoverlay/{type}/google3857/{z}/{y}/{x}.{format}',
-    {
-        maxZoom: 19,
-        attribution: 'Overlay: &copy; <a href="https://www.basemap.at">basemap.at</a>',
-        type: 'normal',
-        format: 'png',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
     }
 );
@@ -51,7 +40,7 @@ var osmMapnik = new L.TileLayer(
         minZoom: 3,
         maxZoom: 20,
         maxNativeZoom: 19,
-        attribution: 'Data and Map: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: 'Map data and style: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }
 );
 
@@ -59,7 +48,7 @@ var TracestrackTopo = new L.tileLayer(
     'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
     {
         maxZoom: 18,
-        attribution: 'Data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a>, Map: &copy; <a href="https://www.tracestrack.com/">Tracestrack</a>'
+        attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a>, Map style: &copy; <a href="https://www.tracestrack.com/">Tracestrack</a>'
     }
 );
 
@@ -69,7 +58,50 @@ var osmOpenTopoMap = new L.TileLayer(
         minZoom: 3,
         maxZoom: 20,
         maxNativeZoom: 17,
-        attribution: 'Kartendaten: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende, <a href="http://viewfinderpanoramas.org">SRTM</a>, Kartendarstellung: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a>, Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    }
+);
+
+var OpenRailwayMap_standard = new L.tileLayer(
+    'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
+    {
+        maxZoom: 19,
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    }
+);
+
+var OpenRailwayMap_maxspeed = new L.tileLayer(
+    'https://{s}.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png',
+    {
+        maxZoom: 19,
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    }
+);
+
+var WaymarkedTrails_hiking = new L.tileLayer(
+    'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png',
+    {
+        maxZoom: 18,
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    }
+);
+
+var WaymarkedTrails_cycling = new L.tileLayer(
+    'https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png',
+    {
+        maxZoom: 18,
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    }
+);
+
+var BasemapAT_overlay = new L.tileLayer(
+    'https://mapsneu.wien.gv.at/basemap/bmapoverlay/{type}/google3857/{z}/{y}/{x}.{format}',
+    {
+        maxZoom: 19,
+        attribution: 'Overlay data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+        type: 'normal',
+        format: 'png',
+        bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
     }
 );
 
@@ -83,6 +115,10 @@ var baseLayers = {
 };
 
 var overlayLayers = {
+    "OpenRailwayMap (Infrastruktur)": OpenRailwayMap_standard,
+    "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
+    "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
+    "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
     "basemap.at (OVERLAY)": BasemapAT_overlay
 };
 
