@@ -1,32 +1,4 @@
 /*
- * TileLayer for Bing Maps.
- */
-L.TileLayer.QuadKeyTileLayer = L.TileLayer.extend({
-    getTileUrl: function (tilePoint) {
-        return L.Util.template(this._url, {
-            s: this._getSubdomain(tilePoint),
-            q: this._quadKey(tilePoint.x, tilePoint.y, this._getZoomForUrl())
-        });
-    },
-    _quadKey: function (x, y, z) {
-        var quadKey = [];
-        for (var i = z; i > 0; i--) {
-            var digit = '0';
-            var mask = 1 << (i - 1);
-            if ((x & mask) != 0) {
-                digit++;
-            }
-            if ((y & mask) != 0) {
-                digit++;
-                digit++;
-            }
-            quadKey.push(digit);
-        }
-        return quadKey.join('');
-    }
-});
-
-/*
  * Layer definitions.
  */
 var BasemapAT_basemap = L.tileLayer(
@@ -79,17 +51,6 @@ var osmMapnik = new L.TileLayer(
         minZoom: 3,
         maxZoom: 20,
         maxNativeZoom: 19,
-        attribution: 'Map data © OpenStreetMap contributors'
-    }
-);
-
-var osmMapnikTransparent = new L.TileLayer(
-    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 19,
-        opacity: 0.5,
         attribution: 'Map data © OpenStreetMap contributors'
     }
 );
@@ -148,28 +109,6 @@ var googleHybrid = new L.TileLayer(
     }
 );
 
-var bingMaps = new L.TileLayer.QuadKeyTileLayer(
-    'https://ecn.t{s}.tiles.virtualearth.net/tiles/r{q}?g=864&mkt=en-gb&lbl=l1&stl=h&shading=hill&n=z',
-    {
-        subdomains: "0123",
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 19,
-        attribution: "<a href=\'http://maps.bing.com/\'>Bing</a> map data copyright Microsoft and its suppliers"
-    }
-);
-
-var bingAerial = new L.TileLayer.QuadKeyTileLayer(
-    'https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}?g=737&n=z',
-    {
-        subdomains: "0123",
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 19,
-        attribution: "<a href=\'http://maps.bing.com/\'>Bing</a> map data copyright Microsoft and its suppliers"
-    }
-);
-
 var baseLayers = {
     "basemap.at (STANDARD)": BasemapAT_basemap,
     "basemap.at (HIDPI)": BasemapAT_highdpi,
@@ -179,14 +118,11 @@ var baseLayers = {
     "OpenTopoMap": osmOpenTopoMap,
     "Google Maps": googleMaps,
     "Google Maps Satellite": googleSatellite,
-    "Google Maps Hybrid": googleHybrid,
-    "Bing Maps": bingMaps,
-    "Bing Aerial View": bingAerial
+    "Google Maps Hybrid": googleHybrid
 };
 
 var overlayLayers = {
-    "basemap.at (OVERLAY)": BasemapAT_overlay,
-    "OpenStreetMap (transparent)": osmMapnikTransparent
+    "basemap.at (OVERLAY)": BasemapAT_overlay
 };
 
 /*
