@@ -27,7 +27,7 @@ var BasemapAT_orthofoto = new L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 20,
-        attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+        attribution: 'Map data: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'jpeg',
         bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
@@ -52,13 +52,47 @@ var TracestrackTopo = new L.tileLayer(
     }
 );
 
-var osmOpenTopoMap = new L.TileLayer(
+var OpenTopoMap = new L.TileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
     {
         minZoom: 3,
         maxZoom: 20,
         maxNativeZoom: 17,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a>, Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a>, Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
+    }
+);
+
+var Thunderforest_OpenCycleMap = new L.tileLayer(
+    'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}',
+    {
+        maxZoom: 22,
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
+        apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
+    }
+);
+
+var CyclOSM = new L.tileLayer(
+    'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
+    {
+        maxZoom: 20,
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases">CyclOSM</a>'
+    }
+);
+
+var Thunderforest_Transport = new L.tileLayer(
+    'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey={apikey}',
+    {
+        maxZoom: 22,
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
+        apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
+    }
+);
+
+var OPNVKarte = new L.tileLayer(
+    'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
+    {
+          maxZoom: 18,
+          attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
     }
 );
 
@@ -66,7 +100,7 @@ var OpenRailwayMap_standard = new L.tileLayer(
     'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
     }
 );
 
@@ -74,7 +108,7 @@ var OpenRailwayMap_maxspeed = new L.tileLayer(
     'https://{s}.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
     }
 );
 
@@ -82,7 +116,7 @@ var WaymarkedTrails_hiking = new L.tileLayer(
     'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png',
     {
         maxZoom: 18,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
     }
 );
 
@@ -90,7 +124,7 @@ var WaymarkedTrails_cycling = new L.tileLayer(
     'https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png',
     {
         maxZoom: 18,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
     }
 );
 
@@ -111,7 +145,11 @@ var baseLayers = {
     "basemap.at (Orthofoto)": BasemapAT_orthofoto,
     "OpenStreetMap": osmMapnik,
     "Tracestrack Topo": TracestrackTopo,
-    "OpenTopoMap": osmOpenTopoMap
+    "OpenTopoMap": OpenTopoMap,
+    "OpenCycleMap": Thunderforest_OpenCycleMap,
+    "CyclOSM": CyclOSM,
+    "ÖPNVKarte": OPNVKarte,
+    "Transport": Thunderforest_Transport
 };
 
 var overlayLayers = {
