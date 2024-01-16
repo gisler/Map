@@ -4,7 +4,7 @@
 var BasemapAT_basemap = new L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/geolandbasemap/{type}/google3857/{z}/{y}/{x}.{format}',
     {
-        maxZoom: 20,
+        maxZoom: 19,
         attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'png',
@@ -26,7 +26,7 @@ var BasemapAT_highdpi = new L.tileLayer(
 var BasemapAT_orthofoto = new L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
     {
-        maxZoom: 20,
+        maxZoom: 19,
         attribution: 'Map data: &copy; <a href="https://www.basemap.at">basemap.at</a>',
         type: 'normal',
         format: 'jpeg',
@@ -37,9 +37,7 @@ var BasemapAT_orthofoto = new L.tileLayer(
 var osmMapnik = new L.TileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 19,
+        maxZoom: 19,
         attribution: 'Map data and style: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }
 );
@@ -47,7 +45,7 @@ var osmMapnik = new L.TileLayer(
 var TracestrackTopo = new L.tileLayer(
     'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
     {
-        maxZoom: 18,
+        maxZoom: 19,
         attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a>, Map style: &copy; <a href="https://www.tracestrack.com/">Tracestrack</a>'
     }
 );
@@ -55,9 +53,7 @@ var TracestrackTopo = new L.tileLayer(
 var OpenTopoMap = new L.TileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
     {
-        minZoom: 3,
-        maxZoom: 20,
-        maxNativeZoom: 17,
+        maxZoom: 17,
         attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a>, Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
     }
 );
@@ -65,7 +61,7 @@ var OpenTopoMap = new L.TileLayer(
 var Thunderforest_OpenCycleMap = new L.tileLayer(
     'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}',
     {
-        maxZoom: 22,
+        maxZoom: 20,
         attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
         apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
     }
@@ -82,7 +78,7 @@ var CyclOSM = new L.tileLayer(
 var Thunderforest_Transport = new L.tileLayer(
     'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey={apikey}',
     {
-        maxZoom: 22,
+        maxZoom: 20,
         attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
         apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
     }
@@ -91,7 +87,7 @@ var Thunderforest_Transport = new L.tileLayer(
 var OPNVKarte = new L.tileLayer(
     'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
     {
-          maxZoom: 18,
+          maxZoom: 17,
           attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
     }
 );
