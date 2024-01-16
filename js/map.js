@@ -53,7 +53,8 @@ var TracestrackTopo = new L.tileLayer(
 var OpenTopoMap = new L.TileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
     {
-        maxZoom: 17,
+        maxZoom: 19,
+        maxNativeZoom: 17,
         attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a>, Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
     }
 );
@@ -61,7 +62,7 @@ var OpenTopoMap = new L.TileLayer(
 var Thunderforest_OpenCycleMap = new L.tileLayer(
     'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}',
     {
-        maxZoom: 20,
+        maxZoom: 19,
         attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
         apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
     }
@@ -70,7 +71,7 @@ var Thunderforest_OpenCycleMap = new L.tileLayer(
 var CyclOSM = new L.tileLayer(
     'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
     {
-        maxZoom: 20,
+        maxZoom: 19,
         attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases">CyclOSM</a>'
     }
 );
@@ -78,7 +79,7 @@ var CyclOSM = new L.tileLayer(
 var Thunderforest_Transport = new L.tileLayer(
     'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey={apikey}',
     {
-        maxZoom: 20,
+        maxZoom: 19,
         attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
         apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
     }
@@ -87,8 +88,9 @@ var Thunderforest_Transport = new L.tileLayer(
 var OPNVKarte = new L.tileLayer(
     'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
     {
-          maxZoom: 17,
-          attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
+        maxZoom: 19,
+        maxNativeZoom: 17,
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
     }
 );
 
@@ -111,7 +113,8 @@ var OpenRailwayMap_maxspeed = new L.tileLayer(
 var WaymarkedTrails_hiking = new L.tileLayer(
     'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png',
     {
-        maxZoom: 18,
+        maxZoom: 19,
+        maxNativeZoom: 18,
         attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
     }
 );
@@ -119,7 +122,8 @@ var WaymarkedTrails_hiking = new L.tileLayer(
 var WaymarkedTrails_cycling = new L.tileLayer(
     'https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png',
     {
-        maxZoom: 18,
+        maxZoom: 19,
+        maxNativeZoom: 18,
         attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
     }
 );
