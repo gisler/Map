@@ -163,8 +163,6 @@ var overlayLayers = {
  */
 let map = L.map('map', {
   layers: [osmMapnik],
-  center: [47.698321, 12.9859555],
-  zoom: 3,
   worldCopyJump: true,
   fullscreenControl: true
 });
