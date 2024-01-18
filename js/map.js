@@ -2,160 +2,160 @@
  * Define layers
  */
 var BasemapAT_basemap = L.tileLayer(
-    'https://mapsneu.wien.gv.at/basemap/geolandbasemap/{type}/google3857/{z}/{y}/{x}.{format}',
-    {
-        maxZoom: 19,
-        attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
-        type: 'normal',
-        format: 'png',
-        bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
-    }
+  'https://mapsneu.wien.gv.at/basemap/geolandbasemap/{type}/google3857/{z}/{y}/{x}.{format}',
+  {
+    maxZoom: 19,
+    attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+    type: 'normal',
+    format: 'png',
+    bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
+  }
 );
 
 var BasemapAT_highdpi = L.tileLayer(
-    'https://mapsneu.wien.gv.at/basemap/bmaphidpi/{type}/google3857/{z}/{y}/{x}.{format}',
-    {
-        maxZoom: 19,
-        attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
-        type: 'normal',
-        format: 'jpeg',
-        bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
-    }
+  'https://mapsneu.wien.gv.at/basemap/bmaphidpi/{type}/google3857/{z}/{y}/{x}.{format}',
+  {
+    maxZoom: 19,
+    attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+    type: 'normal',
+    format: 'jpeg',
+    bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
+  }
 );
 
 var BasemapAT_orthofoto = L.tileLayer(
-    'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
-    {
-        maxZoom: 19,
-        attribution: 'Map data: &copy; <a href="https://www.basemap.at">basemap.at</a>',
-        type: 'normal',
-        format: 'jpeg',
-        bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
-    }
+  'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
+  {
+    maxZoom: 19,
+    attribution: 'Map data: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+    type: 'normal',
+    format: 'jpeg',
+    bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
+  }
 );
 
 var osmMapnik = new L.TileLayer(
-    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        attribution: 'Map data and style: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    attribution: 'Map data and style: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }
 );
 
 var TracestrackTopo = L.tileLayer(
-    'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
-    {
-        maxZoom: 19,
-        attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a>, Map style: &copy; <a href="https://www.tracestrack.com/">Tracestrack</a>'
-    }
+  'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
+  {
+    maxZoom: 19,
+    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org/">SRTM</a>, <a href="https://www.gebco.net">GEBCO</a>, <a href="https://sonny.4lima.de/">SONNY\'s LiDAR DTM</a>, <a href="https://portal.opentopography.org/datasetMetadata?otCollectionID=OT.032021.4326.2">NASADEM</a>, <a href="https://worldcover2021.esa.int">ESA WorldCover</a>, Map style: &copy; <a href="https://www.tracestrack.com/">Tracestrack</a>'
+  }
 );
 
 var OpenTopoMap = new L.TileLayer(
-    'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        maxNativeZoom: 17,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a>, Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
-    }
+  'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    maxNativeZoom: 17,
+    attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a>, Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
+  }
 );
 
 var Thunderforest_OpenCycleMap = L.tileLayer(
-    'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
-    {
-        maxZoom: 19,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
-    }
+  'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
+  {
+    maxZoom: 19,
+    attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
+  }
 );
 
 var CyclOSM = L.tileLayer(
-    'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases">CyclOSM</a>'
-    }
+  'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases">CyclOSM</a>'
+  }
 );
 
 var Thunderforest_Transport = L.tileLayer(
-    'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
-    {
-        maxZoom: 19,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
-    }
+  'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
+  {
+    maxZoom: 19,
+    attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
+  }
 );
 
 var OPNVKarte = L.tileLayer(
-    'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        maxNativeZoom: 17,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
-    }
+  'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    maxNativeZoom: 17,
+    attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
+  }
 );
 
 var OpenRailwayMap_standard = L.tileLayer(
-    'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
-    }
+  'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
+  }
 );
 
 var OpenRailwayMap_maxspeed = L.tileLayer(
-    'https://{s}.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
-    }
+  'https://{s}.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
+  }
 );
 
 var WaymarkedTrails_hiking = L.tileLayer(
-    'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        maxNativeZoom: 18,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
-    }
+  'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    maxNativeZoom: 18,
+    attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
+  }
 );
 
 var WaymarkedTrails_cycling = L.tileLayer(
-    'https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png',
-    {
-        maxZoom: 19,
-        maxNativeZoom: 18,
-        attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
-    }
+  'https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    maxNativeZoom: 18,
+    attribution: 'Overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
+  }
 );
 
 var BasemapAT_overlay = L.tileLayer(
-    'https://mapsneu.wien.gv.at/basemap/bmapoverlay/{type}/google3857/{z}/{y}/{x}.{format}',
-    {
-        maxZoom: 19,
-        attribution: 'Overlay data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
-        type: 'normal',
-        format: 'png',
-        bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
-    }
+  'https://mapsneu.wien.gv.at/basemap/bmapoverlay/{type}/google3857/{z}/{y}/{x}.{format}',
+  {
+    maxZoom: 19,
+    attribution: 'Overlay data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+    type: 'normal',
+    format: 'png',
+    bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
+  }
 );
 
 var baseLayers = {
-    "basemap.at (STANDARD)": BasemapAT_basemap,
-    "basemap.at (HIDPI)": BasemapAT_highdpi,
-    "basemap.at (Orthofoto)": BasemapAT_orthofoto,
-    "OpenStreetMap": osmMapnik,
-    "Tracestrack Topo": TracestrackTopo,
-    "OpenTopoMap": OpenTopoMap,
-    "OpenCycleMap": Thunderforest_OpenCycleMap,
-    "CyclOSM": CyclOSM,
-    "ÖPNVKarte": OPNVKarte,
-    "Transport": Thunderforest_Transport
+  "basemap.at (STANDARD)": BasemapAT_basemap,
+  "basemap.at (HIDPI)": BasemapAT_highdpi,
+  "basemap.at (Orthofoto)": BasemapAT_orthofoto,
+  "OpenStreetMap": osmMapnik,
+  "Tracestrack Topo": TracestrackTopo,
+  "OpenTopoMap": OpenTopoMap,
+  "OpenCycleMap": Thunderforest_OpenCycleMap,
+  "CyclOSM": CyclOSM,
+  "ÖPNVKarte": OPNVKarte,
+  "Transport": Thunderforest_Transport
 };
 
 var overlayLayers = {
-    "OpenRailwayMap (Infrastruktur)": OpenRailwayMap_standard,
-    "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
-    "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
-    "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
-    "basemap.at (OVERLAY)": BasemapAT_overlay
+  "OpenRailwayMap (Infrastruktur)": OpenRailwayMap_standard,
+  "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
+  "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
+  "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
+  "basemap.at (OVERLAY)": BasemapAT_overlay
 };
 
 /*
@@ -167,13 +167,13 @@ L.Icon.Default.imagePath = './images/';
  * Initialise the map
  */
 let map = L.map('map', {
-    layers: [osmMapnik],
-    worldCopyJump: true,
-    fullscreenControl: true
+  layers: [osmMapnik],
+  worldCopyJump: true,
+  fullscreenControl: true
 });
 
 if (!map.restoreView()) {
-    map.fitBounds([[46.35877, 8.782379], [49.037872, 17.189532]]);
+  map.fitBounds([[46.35877, 8.782379], [49.037872, 17.189532]]);
 }
 
 /*
@@ -190,5 +190,5 @@ L.control.locate().addTo(map);
 new L.Control.Measure().addTo(map);
 
 new L.Control.Geocoder({
-    position: 'topleft'
+  position: 'topleft'
 }).addTo(map);
