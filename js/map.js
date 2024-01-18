@@ -1,7 +1,7 @@
 /*
- * Layer definitions.
+ * Define layers
  */
-var BasemapAT_basemap = new L.tileLayer(
+var BasemapAT_basemap = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/geolandbasemap/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 19,
@@ -12,7 +12,7 @@ var BasemapAT_basemap = new L.tileLayer(
     }
 );
 
-var BasemapAT_highdpi = new L.tileLayer(
+var BasemapAT_highdpi = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaphidpi/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 19,
@@ -23,7 +23,7 @@ var BasemapAT_highdpi = new L.tileLayer(
     }
 );
 
-var BasemapAT_orthofoto = new L.tileLayer(
+var BasemapAT_orthofoto = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 19,
@@ -42,7 +42,7 @@ var osmMapnik = new L.TileLayer(
     }
 );
 
-var TracestrackTopo = new L.tileLayer(
+var TracestrackTopo = L.tileLayer(
     'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
     {
         maxZoom: 19,
@@ -59,16 +59,15 @@ var OpenTopoMap = new L.TileLayer(
     }
 );
 
-var Thunderforest_OpenCycleMap = new L.tileLayer(
-    'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}',
+var Thunderforest_OpenCycleMap = L.tileLayer(
+    'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
     {
         maxZoom: 19,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
-        apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
     }
 );
 
-var CyclOSM = new L.tileLayer(
+var CyclOSM = L.tileLayer(
     'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
@@ -76,16 +75,15 @@ var CyclOSM = new L.tileLayer(
     }
 );
 
-var Thunderforest_Transport = new L.tileLayer(
-    'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey={apikey}',
+var Thunderforest_Transport = L.tileLayer(
+    'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
     {
         maxZoom: 19,
-        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>',
-        apikey: 'd7c01fc23a124d2abb45fee7d5c9113e'
+        attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
     }
 );
 
-var OPNVKarte = new L.tileLayer(
+var OPNVKarte = L.tileLayer(
     'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
@@ -94,7 +92,7 @@ var OPNVKarte = new L.tileLayer(
     }
 );
 
-var OpenRailwayMap_standard = new L.tileLayer(
+var OpenRailwayMap_standard = L.tileLayer(
     'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
@@ -102,7 +100,7 @@ var OpenRailwayMap_standard = new L.tileLayer(
     }
 );
 
-var OpenRailwayMap_maxspeed = new L.tileLayer(
+var OpenRailwayMap_maxspeed = L.tileLayer(
     'https://{s}.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
@@ -110,7 +108,7 @@ var OpenRailwayMap_maxspeed = new L.tileLayer(
     }
 );
 
-var WaymarkedTrails_hiking = new L.tileLayer(
+var WaymarkedTrails_hiking = L.tileLayer(
     'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
@@ -119,7 +117,7 @@ var WaymarkedTrails_hiking = new L.tileLayer(
     }
 );
 
-var WaymarkedTrails_cycling = new L.tileLayer(
+var WaymarkedTrails_cycling = L.tileLayer(
     'https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png',
     {
         maxZoom: 19,
@@ -128,7 +126,7 @@ var WaymarkedTrails_cycling = new L.tileLayer(
     }
 );
 
-var BasemapAT_overlay = new L.tileLayer(
+var BasemapAT_overlay = L.tileLayer(
     'https://mapsneu.wien.gv.at/basemap/bmapoverlay/{type}/google3857/{z}/{y}/{x}.{format}',
     {
         maxZoom: 19,
@@ -161,101 +159,36 @@ var overlayLayers = {
 };
 
 /*
- * Set path to default marker images.
+ * Set defaults
  */
-L.Icon.Default.imagePath = 'images/';
+L.Icon.Default.imagePath = './images/';
 
 /*
- * Initialization of map.
+ * Initialise the map
  */
 let map = L.map('map', {
     layers: [osmMapnik],
-    maxBounds: [[90,-500], [-90,500]],
     worldCopyJump: true,
     fullscreenControl: true
 });
 
-/*
- * Remove Ukrainian flag from attribution to keep this politically neutral.
- */
-map.attributionControl.setPrefix('<a href="https://leafletjs.com" title="A JavaScript library for interactive maps">Leaflet</a>');
-
-/*
- * Restore last position or fallback to world.
- */
 if (!map.restoreView()) {
-    map.fitBounds([[75,-160], [-45,160]]);
+    map.fitBounds([[46.35877, 8.782379], [49.037872, 17.189532]]);
 }
 
 /*
- * History control that allows the user to go back in movement history.
+ * Add controls
  */
-new L.HistoryControl({
-    maxMovesToSave: 100
-}).addTo(map);
+new L.HistoryControl().addTo(map);
 
-/*
- * Layer selector with base and overlay layers.
- */
-let layercontrol = L.control.layers(baseLayers, overlayLayers).addTo(map);
+L.control.layers(baseLayers, overlayLayers).addTo(map);
 
-/*
- * A nice scale in the bottom left corner.
- */
 L.control.scale().addTo(map);
 
-/*
- * Locate control.
- */
-L.control.locate({
-    icon: 'fa fa-location-arrow',
-    showPopup: false
-}).addTo(map);
+L.control.locate().addTo(map);
 
-/*
- * Measure control with km as unit.
- */
-new L.Control.Measure({
-    position: 'topleft',
-}).addTo(map);
+new L.Control.Measure().addTo(map);
 
-/*
- * Initialize and configure geocoder.
- */
 new L.Control.Geocoder({
-        position: 'topleft',
-        defaultMarkGeocode: false,
-    })
-    .on('markgeocode', function(e) {
-        let result = e.geocode || result;
-
-        map.fitBounds(result.bbox);
-
-        let marker = createMarker(result.center, { title: result.name })
-            .bindPopup(result.html || result.name)
-            .addTo(this._map)
-            .openPopup();
-    })
-    .addTo(map);
-
-/*
- * Create universal marker with contextmenu.
- */
-function createMarker(position, options = {}) {
-    let marker = new L.Marker(position, {
-        title: options.title,
-
-        contextmenu: true,
-        contextmenuInheritItems: false,
-        contextmenuItems: [
-            {
-                text: 'Remove marker',
-                callback: function (e) {
-                    map.removeLayer(marker);
-                }
-            }
-        ]
-    });
-
-    return marker;
-}
+    position: 'topleft'
+}).addTo(map);
