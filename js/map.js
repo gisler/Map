@@ -159,15 +159,12 @@ var overlayLayers = {
 };
 
 /*
- * Set defaults
- */
-L.Icon.Default.imagePath = './images/';
-
-/*
  * Initialise the map
  */
 let map = L.map('map', {
   layers: [osmMapnik],
+  center: [47.698321, 12.9859555],
+  zoom: 3,
   worldCopyJump: true,
   fullscreenControl: true
 });
