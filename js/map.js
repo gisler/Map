@@ -34,6 +34,14 @@ var BasemapAT_orthofoto = L.tileLayer(
   }
 );
 
+var MapTiler_satellite = L.tileLayer(
+  'https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key=8HeDqL7QC28I7sdEf4ev',
+  {
+    maxZoom: 19,
+    attribution: 'Map data: &copy; <a href="https://www.maptiler.com/copyright/">MapTiler</a>'
+  }
+);
+
 var osmMapnik = new L.TileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   {
@@ -141,6 +149,7 @@ var baseLayers = {
   "basemap.at (STANDARD)": BasemapAT_basemap,
   "basemap.at (HIDPI)": BasemapAT_highdpi,
   "basemap.at (Orthofoto)": BasemapAT_orthofoto,
+  "MapTiler (Satellite)": MapTiler_satellite,
   "OpenStreetMap": osmMapnik,
   "Tracestrack Topo": TracestrackTopo,
   "OpenTopoMap": OpenTopoMap,
@@ -187,3 +196,15 @@ new L.Control.Measure().addTo(map);
 new L.Control.Geocoder({
   position: 'topleft'
 }).addTo(map);
+
+/*
+ * Events
+ */
+map.on('baselayerchange', function (e) {
+  var logoDiv = document.getElementById('MapTilerLogo');
+  if (e.name === 'MapTiler (Satellite)') {
+    logoDiv.innerHTML += '<a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>';
+  } else {
+    logoDiv.innerHTML = '';
+  }
+});
