@@ -67,7 +67,7 @@ var OpenTopoMap = new L.TileLayer(
   }
 );
 
-var Thunderforest_OpenCycleMap = L.tileLayer(
+var ThunderforestOpenCycleMap = L.tileLayer(
   'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
   {
     maxZoom: 19,
@@ -83,7 +83,7 @@ var CyclOSM = L.tileLayer(
   }
 );
 
-var Thunderforest_Transport = L.tileLayer(
+var ThunderforestTransport = L.tileLayer(
   'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
   {
     maxZoom: 19,
@@ -100,13 +100,12 @@ var OPNVKarte = L.tileLayer(
   }
 );
 
-var OPNVKarte_overlay = L.tileLayer(
-  'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
+var ThunderforestTransport_overlay = L.tileLayer(
+  'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
   {
     maxZoom: 19,
-    maxNativeZoom: 17,
     opacity: 0.4,
-    attribution: 'Overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
+    attribution: 'Overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
   }
 );
 
@@ -163,14 +162,14 @@ var baseLayers = {
   "OpenStreetMap": osmMapnik,
   "Tracestrack Topo": TracestrackTopo,
   "OpenTopoMap": OpenTopoMap,
-  "OpenCycleMap": Thunderforest_OpenCycleMap,
+  "OpenCycleMap": ThunderforestOpenCycleMap,
   "CyclOSM": CyclOSM,
   "ÖPNVKarte": OPNVKarte,
-  "Transport": Thunderforest_Transport
+  "Transport": ThunderforestTransport
 };
 
 var overlayLayers = {
-  "Transport (Overlay)": OPNVKarte_overlay,
+  "Transport (Overlay)": ThunderforestTransport_overlay,
   "OpenRailwayMap (Infrastruktur)": OpenRailwayMap_standard,
   "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
