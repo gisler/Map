@@ -100,6 +100,16 @@ var OPNVKarte = L.tileLayer(
   }
 );
 
+var OPNVKarte_overlay = L.tileLayer(
+  'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
+  {
+    maxZoom: 19,
+    maxNativeZoom: 17,
+    opacity: 0.4,
+    attribution: 'Overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
+  }
+);
+
 var OpenRailwayMap_standard = L.tileLayer(
   'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
   {
@@ -160,6 +170,7 @@ var baseLayers = {
 };
 
 var overlayLayers = {
+  "Transport (Overlay)": OPNVKarte_overlay,
   "OpenRailwayMap (Infrastruktur)": OpenRailwayMap_standard,
   "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
