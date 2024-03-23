@@ -154,7 +154,7 @@ var BasemapAT_overlay = L.tileLayer(
   }
 );
 
-var oev_wmts = new L.TileLayer.WMTS(
+var oev_gueteklassen_wmts = new L.TileLayer.WMTS(
   'http://85.215.167.19:8081/geoserver/klimabonus/gwc/service/wmts?',
   {
     version: '1.1.1',
@@ -167,7 +167,20 @@ var oev_wmts = new L.TileLayer.WMTS(
   }
 );
 
-var oev_wms = L.tileLayer.wms(
+var oev_gueteklassen_sub_wmts = new L.TileLayer.WMTS(
+  'http://85.215.167.19:8081/geoserver/klimabonus/gwc/service/wmts?',
+  {
+    version: '1.1.1',
+    layer: 'oev_gueteklassen_polygone_20231031_sub',
+    style: 'klimabonus:gueteklasse_sub',
+    tilematrixset: 'EPSG:900913',
+    format: 'image/png',
+    opacity: 0.6,
+    attribution: 'Overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
+  }
+);
+
+var oev_gueteklassen_wms = L.tileLayer.wms(
   'http://85.215.167.19:8081/geoserver/klimabonus/ows?',
   {
     layers: 'oev_gueteklassen_polygone_20231031',
@@ -200,7 +213,8 @@ var overlayLayers = {
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
   "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
   "basemap.at (OVERLAY)": BasemapAT_overlay,
-  "ÖV-Güteklassen": oev_wmts
+  "ÖV-Güteklassen (Polygons)": oev_gueteklassen_wmts,
+  "ÖV-Güteklassen (Subdivided Polygons)": oev_gueteklassen_sub_wmts
 };
 
 /*
