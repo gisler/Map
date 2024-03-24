@@ -154,12 +154,12 @@ var BasemapAT_overlay = L.tileLayer(
   }
 );
 
-var oev_gueteklassen_sub_wmts = new L.TileLayer.WMTS(
+var oev_gueteklassen_wmts = new L.TileLayer.WMTS(
   'http://85.215.167.19:8081/geoserver/klimabonus/gwc/service/wmts?',
   {
     version: '1.1.1',
-    layer: 'oev_gueteklassen_polygone_20231031_sub',
-    style: 'klimabonus:gueteklasse_sub',
+    layer: 'oev_gueteklassen_polygone_20231031',
+    style: 'klimabonus:gueteklasse',
     tilematrixset: 'EPSG:900913',
     format: 'image/png',
     opacity: 0.6,
@@ -200,7 +200,7 @@ var overlayLayers = {
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
   "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
   "basemap.at (OVERLAY)": BasemapAT_overlay,
-  "ÖV-Güteklassen": oev_gueteklassen_sub_wmts
+  "ÖV-Güteklassen": oev_gueteklassen_wmts
 };
 
 /*
