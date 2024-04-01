@@ -239,8 +239,8 @@ new L.Control.Geocoder({
 map.on('baselayerchange', function (e) {
   var logoDiv = document.getElementById('MapTilerLogo');
   if (e.name === 'MapTiler (Satellite)') {
-    logoDiv.innerHTML += '<a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>';
+    logoDiv.removeAttribute('hidden');
   } else {
-    logoDiv.innerHTML = '';
+    logoDiv.setAttribute('hidden', '');
   }
 });
