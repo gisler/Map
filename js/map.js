@@ -105,7 +105,7 @@ var ThunderforestTransport_overlay = L.tileLayer(
   {
     maxZoom: 19,
     opacity: 0.4,
-    attribution: 'Transport overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
+    attribution: 'Transport overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Transport overlay style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
   }
 );
 
@@ -113,7 +113,7 @@ var OpenRailwayMap_standard = L.tileLayer(
   'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
   {
     maxZoom: 19,
-    attribution: 'OpenRailwayMap overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
+    attribution: 'OpenRailwayMap overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, OpenRailwayMap overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
   }
 );
 
@@ -121,7 +121,7 @@ var OpenRailwayMap_maxspeed = L.tileLayer(
   'https://{s}.tiles.openrailwaymap.org/maxspeed/{z}/{x}/{y}.png',
   {
     maxZoom: 19,
-    attribution: 'OpenRailwayMap overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
+    attribution: 'OpenRailwayMap overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, OpenRailwayMap overlay style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a>'
   }
 );
 
@@ -130,7 +130,7 @@ var WaymarkedTrails_hiking = L.tileLayer(
   {
     maxZoom: 19,
     maxNativeZoom: 18,
-    attribution: 'Waymarked Trails overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
+    attribution: 'Waymarked Trails overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Waymarked Trails overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
   }
 );
 
@@ -139,7 +139,7 @@ var WaymarkedTrails_cycling = L.tileLayer(
   {
     maxZoom: 19,
     maxNativeZoom: 18,
-    attribution: 'Waymarked Trails overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
+    attribution: 'Waymarked Trails overlay data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Waymarked Trails overlay style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a>'
   }
 );
 
@@ -175,7 +175,7 @@ var oev_gueteklassen_wms = L.tileLayer.wms(
     format: 'image/png',
     transparent: 'true',
     opacity: 0.6,
-    attribution: 'Overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
+    attribution: 'ÖV-Güteklassen overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
   }
 );
 
