@@ -154,30 +154,30 @@ var BasemapAT_overlay = L.tileLayer(
   }
 );
 
-var oev_gueteklassen_wmts = new L.TileLayer.WMTS(
-  'http://85.215.167.19:8081/geoserver/klimabonus/gwc/service/wmts?',
-  {
-    version: '1.1.1',
-    layer: 'oev_gueteklassen_polygone_20231031',
-    style: 'klimabonus:gueteklasse',
-    tilematrixset: 'EPSG:900913',
-    format: 'image/png',
-    opacity: 0.6,
-    attribution: 'ÖV-Güteklassen overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
-  }
-);
+// var oev_gueteklassen_wmts = new L.TileLayer.WMTS(
+  // 'http://85.215.167.19:8081/geoserver/klimabonus/gwc/service/wmts?',
+  // {
+    // version: '1.1.1',
+    // layer: 'oev_gueteklassen_polygone_20231031',
+    // style: 'klimabonus:gueteklasse',
+    // tilematrixset: 'EPSG:900913',
+    // format: 'image/png',
+    // opacity: 0.6,
+    // attribution: 'ÖV-Güteklassen overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
+  // }
+// );
 
-var oev_gueteklassen_wms = L.tileLayer.wms(
-  'http://85.215.167.19:8081/geoserver/klimabonus/ows?',
-  {
-    layers: 'oev_gueteklassen_polygone_20231031',
-    styles: 'klimabonus:gueteklasse',
-    format: 'image/png',
-    transparent: 'true',
-    opacity: 0.6,
-    attribution: 'ÖV-Güteklassen overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
-  }
-);
+// var oev_gueteklassen_wms = L.tileLayer.wms(
+  // 'http://85.215.167.19:8081/geoserver/klimabonus/ows?',
+  // {
+    // layers: 'oev_gueteklassen_polygone_20231031',
+    // styles: 'klimabonus:gueteklasse',
+    // format: 'image/png',
+    // transparent: 'true',
+    // opacity: 0.6,
+    // attribution: 'ÖV-Güteklassen overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
+  // }
+// );
 
 var baseLayers = {
   "basemap.at (STANDARD)": BasemapAT_basemap,
@@ -199,8 +199,7 @@ var overlayLayers = {
   "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
   "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
-  "basemap.at (OVERLAY)": BasemapAT_overlay,
-  "ÖV-Güteklassen (31.10.2023)": oev_gueteklassen_wmts
+  "basemap.at (OVERLAY)": BasemapAT_overlay
 };
 
 /*
