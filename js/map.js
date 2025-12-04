@@ -194,7 +194,6 @@ var baseLayers = {
 };
 
 var overlayLayers = {
-  "Transport (Overlay)": ThunderforestTransport_overlay,
   "OpenRailwayMap (Infrastruktur)": OpenRailwayMap_standard,
   "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
