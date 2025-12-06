@@ -100,14 +100,14 @@ var OPNVKarte = L.tileLayer(
   }
 );
 
-var ThunderforestTransport_overlay = L.tileLayer(
-  'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
-  {
-    maxZoom: 19,
-    opacity: 0.4,
-    attribution: 'Transport overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Transport overlay style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
-  }
-);
+// var ThunderforestTransport_overlay = L.tileLayer(
+  // 'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
+  // {
+    // maxZoom: 19,
+    // opacity: 0.4,
+    // attribution: 'Transport overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Transport overlay style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
+  // }
+// );
 
 var OpenRailwayMap_standard = L.tileLayer(
   'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
