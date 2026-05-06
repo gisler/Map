@@ -23,6 +23,28 @@ var BasemapAT_highdpi = L.tileLayer(
   }
 );
 
+var BasemapAT_grau = L.tileLayer(
+  'https://mapsneu.wien.gv.at/basemap/bmapgrau/{type}/google3857/{z}/{y}/{x}.{format}',
+  {
+    maxZoom: 19,
+    attribution: 'Map data and style: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+    type: 'normal',
+    format: 'png',
+    bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
+  }
+);
+
+var BasemapAT_terrain = L.tileLayer(
+  'https://mapsneu.wien.gv.at/basemap/bmapgelaende/{type}/google3857/{z}/{y}/{x}.{format}',
+  {
+    maxZoom: 19,
+    attribution: 'Map data: &copy; <a href="https://www.basemap.at">basemap.at</a>',
+    type: 'grau',
+    format: 'jpeg',
+    bounds: [[46.35877, 8.782379], [49.037872, 17.189532]]
+  }
+);
+
 var BasemapAT_orthofoto = L.tileLayer(
   'https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/{type}/google3857/{z}/{y}/{x}.{format}',
   {
@@ -184,6 +206,8 @@ var mobilfunknetz_overlay = new L.TileLayer.WMTS(
 var baseLayers = {
   "basemap.at (STANDARD)": BasemapAT_basemap,
   "basemap.at (HIDPI)": BasemapAT_highdpi,
+  "basemap.at (GRAU)": BasemapAT_grau,
+  "basemap.at (Gelände)": BasemapAT_terrain,
   "basemap.at (Orthofoto)": BasemapAT_orthofoto,
   "MapTiler (Satellite)": MapTiler_satellite,
   "OpenStreetMap": osmMapnik,
