@@ -100,15 +100,6 @@ var OPNVKarte = L.tileLayer(
   }
 );
 
-// var ThunderforestTransport_overlay = L.tileLayer(
-  // 'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
-  // {
-    // maxZoom: 19,
-    // opacity: 0.4,
-    // attribution: 'Transport overlay data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Transport overlay style: &copy; <a href="http://www.thunderforest.com/">Thunderforest</a>'
-  // }
-// );
-
 var OpenRailwayMap_standard = L.tileLayer(
   'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
   {
@@ -154,18 +145,17 @@ var BasemapAT_overlay = L.tileLayer(
   }
 );
 
-// var oev_gueteklassen_wmts = new L.TileLayer.WMTS(
-  // 'http://85.215.167.19:8081/geoserver/klimabonus/gwc/service/wmts?',
-  // {
-    // version: '1.1.1',
-    // layer: 'oev_gueteklassen_polygone_20231031',
-    // style: 'klimabonus:gueteklasse',
-    // tilematrixset: 'EPSG:900913',
-    // format: 'image/png',
-    // opacity: 0.6,
-    // attribution: 'ÖV-Güteklassen overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
-  // }
-// );
+var festnetz_overlay = new L.TileLayer.WMTS(
+  'https://breitbandatlas.gv.at/resources/gwc/service/wmts?',
+  {
+    version: '1.0.0',
+    layer: 'Festnetz',
+    tilematrixset: 'EPSG:3857',
+    format: 'image/png',
+    opacity: 0.6,
+    attribution: 'Festnetz overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>'
+  }
+);
 
 // var oev_gueteklassen_wms = L.tileLayer.wms(
   // 'http://85.215.167.19:8081/geoserver/klimabonus/ows?',
@@ -198,7 +188,8 @@ var overlayLayers = {
   "OpenRailwayMap (Höchstgeschwindigkeit)": OpenRailwayMap_maxspeed,
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
   "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
-  "basemap.at (OVERLAY)": BasemapAT_overlay
+  "basemap.at (OVERLAY)": BasemapAT_overlay,
+  "breitbandatlas.gv.at (Festnetz)": festnetz_overlay
 };
 
 /*
