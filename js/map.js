@@ -153,7 +153,19 @@ var festnetz_overlay = new L.TileLayer.WMTS(
     tilematrixset: 'EPSG:3857',
     format: 'image/png',
     opacity: 0.6,
-    attribution: 'Festnetz overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>'
+    attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>'
+  }
+);
+
+var mobilfunknetz_overlay = new L.TileLayer.WMTS(
+  'https://breitbandatlas.gv.at/resources/gwc/service/wmts?',
+  {
+    version: '1.0.0',
+    layer: 'Mobilfunknetz',
+    tilematrixset: 'EPSG:3857',
+    format: 'image/png',
+    opacity: 0.6,
+    attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>'
   }
 );
 
@@ -189,7 +201,8 @@ var overlayLayers = {
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
   "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
   "basemap.at (OVERLAY)": BasemapAT_overlay,
-  "breitbandatlas.gv.at (Festnetz)": festnetz_overlay
+  "breitbandatlas.gv.at (Festnetz)": festnetz_overlay,
+  "breitbandatlas.gv.at (Mobilfunknetz)": mobilfunknetz_overlay
 };
 
 /*
