@@ -161,10 +161,11 @@ var festnetz_overlay = new L.TileLayer.WMTS(
   {
     version: '1.0.0',
     layer: 'Festnetz',
+    attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>',
     tilematrixset: 'EPSG:3857',
     format: 'image/png',
     opacity: 0.6,
-    attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>'
+    bounds: [[46.372305, 9.530748], [49.020526, 17.160774]]
   }
 );
 
@@ -173,10 +174,11 @@ var mobilfunknetz_overlay = new L.TileLayer.WMTS(
   {
     version: '1.0.0',
     layer: 'Mobilfunknetz',
+    attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>',
     tilematrixset: 'EPSG:3857',
     format: 'image/png',
     opacity: 0.6,
-    attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>'
+    bounds: [[46.372305, 9.530748], [49.020526, 17.160774]]
   }
 );
 
