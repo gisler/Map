@@ -156,27 +156,21 @@ var BasemapAT_overlay = L.tileLayer(
   }
 );
 
-var festnetz_overlay = new L.TileLayer.WMTS(
-  'https://breitbandatlas.gv.at/resources/gwc/service/wmts?',
+var festnetz_overlay = new L.TileLayer(
+  'https://breitbandatlas.gv.at/resources/gwc/service/wmts?service=WMTS&request=GetTile&version=1.0.0&layer={layer}&tilematrixset=EPSG:3857&format=image/png&width=256&height=256&tilematrix=EPSG:3857:{z}&tilerow={y}&tilecol={x}',
   {
-    version: '1.0.0',
     layer: 'Festnetz',
     attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>',
-    tilematrixset: 'EPSG:3857',
-    format: 'image/png',
     opacity: 0.6,
     bounds: [[46.372305, 9.530748], [49.020526, 17.160774]]
   }
 );
 
-var mobilfunknetz_overlay = new L.TileLayer.WMTS(
-  'https://breitbandatlas.gv.at/resources/gwc/service/wmts?',
+var mobilfunknetz_overlay = new L.TileLayer(
+  'https://breitbandatlas.gv.at/resources/gwc/service/wmts?service=WMTS&request=GetTile&version=1.0.0&layer={layer}&tilematrixset=EPSG:3857&format=image/png&width=256&height=256&tilematrix=EPSG:3857:{z}&tilerow={y}&tilecol={x}',
   {
-    version: '1.0.0',
     layer: 'Mobilfunknetz',
     attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>',
-    tilematrixset: 'EPSG:3857',
-    format: 'image/png',
     opacity: 0.6,
     bounds: [[46.372305, 9.530748], [49.020526, 17.160774]]
   }
