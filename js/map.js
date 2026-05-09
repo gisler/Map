@@ -216,11 +216,14 @@ var overlayLayers = {
 /*
  * Initialise the map
  */
-let map = L.map('map', {
-  layers: [osmMapnik],
-  worldCopyJump: true,
-  fullscreenControl: true
-});
+var map = L.map(
+  'map',
+  {
+    layers: [osmMapnik],
+    worldCopyJump: true,
+    fullscreenControl: true
+  }
+);
 
 if (!map.restoreView()) {
   map.fitBounds([[46.35877, 8.782379], [49.037872, 17.189532]]);
@@ -246,11 +249,45 @@ new L.Control.Geocoder({
 /*
  * Events
  */
-map.on('baselayerchange', function (e) {
+map.on('baselayerchange', function(e) {
   var logoDiv = document.getElementById('MapTilerLogo');
-  if (e.name === 'MapTiler (Satellite)') {
+  if (e.layer === MapTiler_satellite) {
     logoDiv.removeAttribute('hidden');
   } else {
     logoDiv.setAttribute('hidden', '');
+  }
+});
+
+var legendFixed = L.control({position: 'bottomright'});
+legendFixed.onAdd = function(map) {
+  var div = L.DomUtil.create('div', 'legend');
+  div.innerHTML = '<img src="images/legendFixed.png">';
+  return div;
+};
+
+var legendMobile = L.control({position: 'bottomright'});
+legendMobile.onAdd = function(map) {
+  var div = L.DomUtil.create('div', 'legend');
+  div.innerHTML = '<img src="images/legendMobile.png">';
+  return div;
+};
+
+map.on('overlayadd', function(e) {
+  if (e.layer === festnetz_overlay) {
+    map.addControl(legendFixed);
+  }
+
+  if (e.layer === mobilfunknetz_overlay) {
+    map.addControl(legendMobile);
+  }
+});
+
+map.on('overlayremove', function(e) {
+  if (e.layer === festnetz_overlay) {
+    map.removeControl(legendFixed);
+  }
+
+  if (e.layer === mobilfunknetz_overlay) {
+    map.removeControl(legendMobile);
   }
 });
