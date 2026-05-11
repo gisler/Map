@@ -53,7 +53,7 @@ var MapTiler_satellite = L.tileLayer(
   }
 );
 
-var osmMapnik = new L.TileLayer(
+var OpenStreetMap_Mapnik = new L.TileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   {
     maxZoom: 19,
@@ -61,7 +61,7 @@ var osmMapnik = new L.TileLayer(
   }
 );
 
-var TracestrackTopo = L.tileLayer(
+var Tracestrack_Topo = L.tileLayer(
   'https://tile.tracestrack.com/topo__/{z}/{x}/{y}.png?key=226aa72cec112641bd0d3e1e6c808cd6',
   {
     maxZoom: 19,
@@ -78,7 +78,7 @@ var OpenTopoMap = new L.TileLayer(
   }
 );
 
-var ThunderforestOpenCycleMap = L.tileLayer(
+var Thunderforest_OpenCycleMap = L.tileLayer(
   'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
   {
     maxZoom: 19,
@@ -94,7 +94,7 @@ var CyclOSM = L.tileLayer(
   }
 );
 
-var ThunderforestTransport = L.tileLayer(
+var Thunderforest_Transport = L.tileLayer(
   'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=d7c01fc23a124d2abb45fee7d5c9113e',
   {
     maxZoom: 19,
@@ -106,7 +106,7 @@ var OPNVKarte = L.tileLayer(
   'https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
   {
     maxZoom: 19,
-    maxNativeZoom: 17,
+    maxNativeZoom: 18,
     attribution: 'Map data: &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors, Map style: &copy; <a href="https://memomaps.de/">MeMoMaps</a>'
   }
 );
@@ -156,9 +156,10 @@ var BasemapAT_overlay = L.tileLayer(
   }
 );
 
-var festnetz_overlay = new L.TileLayer(
+var BreitbandatlasAT_festnetz = new L.TileLayer(
   'https://breitbandatlas.gv.at/resources/gwc/service/wmts?service=WMTS&request=GetTile&version=1.0.0&layer={layer}&tilematrixset=EPSG:3857&format=image/png&width=256&height=256&tilematrix=EPSG:3857:{z}&tilerow={y}&tilecol={x}',
   {
+    maxZoom: 19,
     layer: 'Festnetz',
     attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>',
     opacity: 0.6,
@@ -166,9 +167,10 @@ var festnetz_overlay = new L.TileLayer(
   }
 );
 
-var mobilfunknetz_overlay = new L.TileLayer(
+var BreitbandatlasAT_mobilfunknetz = new L.TileLayer(
   'https://breitbandatlas.gv.at/resources/gwc/service/wmts?service=WMTS&request=GetTile&version=1.0.0&layer={layer}&tilematrixset=EPSG:3857&format=image/png&width=256&height=256&tilematrix=EPSG:3857:{z}&tilerow={y}&tilecol={x}',
   {
+    maxZoom: 19,
     layer: 'Mobilfunknetz',
     attribution: 'breitbandatlas.gv.at overlay data and style: &copy; <a href="https://www.breitbandatlas.gv.at">breitbandatlas.gv.at</a>',
     opacity: 0.6,
@@ -176,31 +178,19 @@ var mobilfunknetz_overlay = new L.TileLayer(
   }
 );
 
-// var oev_gueteklassen_wms = L.tileLayer.wms(
-  // 'http://85.215.167.19:8081/geoserver/klimabonus/ows?',
-  // {
-    // layers: 'oev_gueteklassen_polygone_20231031',
-    // styles: 'klimabonus:gueteklasse',
-    // format: 'image/png',
-    // transparent: 'true',
-    // opacity: 0.6,
-    // attribution: 'ÖV-Güteklassen overlay data: &copy; <a href="https://www.mobilitydata.gv.at/daten/%C3%B6v-g%C3%BCteklassen">AustriaTech</a>'
-  // }
-// );
-
 var baseLayers = {
   "basemap.at (STANDARD)": BasemapAT_basemap,
   "basemap.at (HIDPI)": BasemapAT_highdpi,
   "basemap.at (GRAU)": BasemapAT_grau,
   "basemap.at (Orthofoto)": BasemapAT_orthofoto,
   "MapTiler (Satellite)": MapTiler_satellite,
-  "OpenStreetMap": osmMapnik,
-  "Tracestrack Topo": TracestrackTopo,
+  "OpenStreetMap": OpenStreetMap_Mapnik,
+  "Tracestrack Topo": Tracestrack_Topo,
   "OpenTopoMap": OpenTopoMap,
-  "OpenCycleMap": ThunderforestOpenCycleMap,
+  "OpenCycleMap": Thunderforest_OpenCycleMap,
   "CyclOSM": CyclOSM,
   "ÖPNVKarte": OPNVKarte,
-  "Transport": ThunderforestTransport
+  "Transport": Thunderforest_Transport
 };
 
 var overlayLayers = {
@@ -209,8 +199,8 @@ var overlayLayers = {
   "Waymarked Trails (Wanderwege)": WaymarkedTrails_hiking,
   "Waymarked Trails (Radwege)": WaymarkedTrails_cycling,
   "basemap.at (OVERLAY)": BasemapAT_overlay,
-  "breitbandatlas.gv.at (Festnetz)": festnetz_overlay,
-  "breitbandatlas.gv.at (Mobilfunknetz)": mobilfunknetz_overlay
+  "breitbandatlas.gv.at (Festnetz)": BreitbandatlasAT_festnetz,
+  "breitbandatlas.gv.at (Mobilfunknetz)": BreitbandatlasAT_mobilfunknetz
 };
 
 /*
@@ -219,7 +209,7 @@ var overlayLayers = {
 var map = L.map(
   'map',
   {
-    layers: [osmMapnik],
+    layers: [OpenStreetMap_Mapnik],
     worldCopyJump: true,
     fullscreenControl: true
   }
@@ -273,21 +263,21 @@ legendMobile.onAdd = function(map) {
 };
 
 map.on('overlayadd', function(e) {
-  if (e.layer === festnetz_overlay) {
+  if (e.layer === BreitbandatlasAT_festnetz) {
     map.addControl(legendFixed);
   }
 
-  if (e.layer === mobilfunknetz_overlay) {
+  if (e.layer === BreitbandatlasAT_mobilfunknetz) {
     map.addControl(legendMobile);
   }
 });
 
 map.on('overlayremove', function(e) {
-  if (e.layer === festnetz_overlay) {
+  if (e.layer === BreitbandatlasAT_festnetz) {
     map.removeControl(legendFixed);
   }
 
-  if (e.layer === mobilfunknetz_overlay) {
+  if (e.layer === BreitbandatlasAT_mobilfunknetz) {
     map.removeControl(legendMobile);
   }
 });
