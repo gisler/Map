@@ -252,10 +252,10 @@ var legendFixed = L.control({position: 'bottomright'});
 legendFixed.onAdd = function(map) {
   var div = L.DomUtil.create('div', 'legend');
   div.innerHTML = `
-<span style="color:rgb(189,   0,  38);">■</span> ≥ 1 Gbit/s</br>
-<span style="color:rgb(240,  59,  32);">■</span> ≥ 300 bis < 1000 Mbit/s</br>
-<span style="color:rgb(253, 141,  60);">■</span> ≥ 100 bis < 300 Mbit/s</br>
-<span style="color:rgb(254, 204,  92);">■</span> ≥ 30 bis < 100 Mbit/s</br>
+<span style="color:rgb(189,   0,  38);">■</span> ≥ 1 Gbit/s<br>
+<span style="color:rgb(240,  59,  32);">■</span> ≥ 300 bis < 1000 Mbit/s<br>
+<span style="color:rgb(253, 141,  60);">■</span> ≥ 100 bis < 300 Mbit/s<br>
+<span style="color:rgb(254, 204,  92);">■</span> ≥ 30 bis < 100 Mbit/s<br>
 <span style="color:rgb(255, 255, 178);">■</span> < 30 Mbit/s
   `;
   return div;
@@ -265,10 +265,10 @@ var legendMobile = L.control({position: 'bottomright'});
 legendMobile.onAdd = function(map) {
   var div = L.DomUtil.create('div', 'legend');
   div.innerHTML = `
-<span style="color:rgb( 37,  52, 148);">■</span> ≥ 1 Gbit/s</br>
-<span style="color:rgb( 44, 127, 184);">■</span> ≥ 300 bis < 1000 Mbit/s</br>
-<span style="color:rgb( 65, 182, 196);">■</span> ≥ 100 bis < 300 Mbit/s</br>
-<span style="color:rgb(161, 218, 180);">■</span> ≥ 30 bis < 100 Mbit/s</br>
+<span style="color:rgb( 37,  52, 148);">■</span> ≥ 1 Gbit/s<br>
+<span style="color:rgb( 44, 127, 184);">■</span> ≥ 300 bis < 1000 Mbit/s<br>
+<span style="color:rgb( 65, 182, 196);">■</span> ≥ 100 bis < 300 Mbit/s<br>
+<span style="color:rgb(161, 218, 180);">■</span> ≥ 30 bis < 100 Mbit/s<br>
 <span style="color:rgb(255, 255, 204);">■</span> < 30 Mbit/s
   `;
   return div;
